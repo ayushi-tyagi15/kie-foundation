@@ -1,0 +1,255 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #e74c3c;
+  --accent-color: #3498db;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+/* Reset */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.hero {
+  background: url("../images/about-us-bg.png") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+  margin-top: 60px !important;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 8;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c0392b;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 50px;
+  font-size: 2.3rem;
+}
+
+.section-title:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: var(--secondary-color);
+  bottom: -10px;
+  left: 0;
+}
+
+/* vision Section */
+.vision-section {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  /* max-width: 1200px; */
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.vision-section:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Hover effect */
+  transform: translateY(-5px);
+}
+
+/* objective Section */
+.our-objective-main-section {
+  padding: 50px 0;
+  background-color: var(--light-color);
+}
+.section-main-heading {
+  font-family: "Merriweather", serif;
+  font-weight: 700; /* ensures bold weight */
+  font-size: 2.4rem;
+}
+.our-objective-para {
+  font-size: 1.2rem;
+}
+
+.objective-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  height: 300px;
+  background: linear-gradient(
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+}
+
+.objective-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  opacity: 0.8;
+}
+
+.objective-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(190, 90, 56, 0.9));
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  transition: all 0.5s ease;
+  color: white;
+}
+
+.objective-card:hover .objective-overlay {
+  bottom: 0;
+}
+
+.objective-card:hover .objective-img {
+  transform: scale(1.1);
+}
+
+.flip-box {
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+  border-radius: 12px;
+  object-fit: cover;
+  filter: grayscale();
+  padding-bottom: 20px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back when front is visible */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-back {
+  background: #ddd; /* light background */
+  color: #333;
+  transform: rotateY(180deg);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .about,
+  .mission,
+  .programs,
+  .team,
+  .donate,
+  .contact {
+    padding: 60px 0;
+  }
+}

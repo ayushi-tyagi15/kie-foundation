@@ -1,0 +1,409 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #e74c3c;
+  --accent-color: #3498db;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+/* Reset */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+body {
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.hero {
+  background: url("../images/bg-img.jpeg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+} */
+.hero-content {
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c0392b;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+.about {
+  padding: 50px 0;
+  background-color: var(--light-color);
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 50px;
+  font-size: 2.3rem;
+}
+
+.section-title:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: var(--secondary-color);
+  bottom: -10px;
+  left: 0;
+}
+.section-main-heading {
+  font-family: "Merriweather", serif;
+  font-weight: 700; /* ensures bold weight */
+  font-size: 2.4rem;
+}
+/* Section Background */
+.saanjh-sathi {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 16px; /* soft rounded corners */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* smooth shadow */
+  padding: 20px;
+}
+
+/* Content Box */
+.saanjh-sathi .content-box {
+  background-color: #fff;
+  padding: 60px;
+  padding-right: 0px;
+  text-align: left;
+  border-radius: 20px;
+}
+
+.saanjh-sathi .logo-img {
+  max-width: 210px;
+  height: auto;
+}
+
+/* Right Side Image */
+.saanjh-sathi .image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 500px;
+}
+
+.saanjh-sathi .image-box img {
+  object-fit: cover;
+  height: 100%;
+  transition: transform 0.8s ease;
+  border-radius: 20px;
+}
+
+.saanjh-sathi .image-box:hover img {
+  transform: scale(1.08);
+}
+
+/* Overlay */
+.saanjh-sathi .gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+}
+
+/* Button */
+.saanjh-sathi .btn {
+  font-weight: 600;
+  padding: 12px 32px;
+  transition: all 0.3s ease;
+}
+
+.saanjh-sathi .btn:hover {
+  background: #2575fc;
+  color: #fff;
+}
+
+/* Mission Section */
+.mission {
+  padding: 100px 0;
+  background-color: white;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  font-size: 3.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+/* Programs Section */
+.programs {
+  padding: 100px 0;
+  background-color: var(--light-color);
+}
+
+.program-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  height: 300px;
+}
+
+.program-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+.program-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(44, 62, 80, 0.9));
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  transition: all 0.5s ease;
+  color: white;
+}
+
+.program-card:hover .program-overlay {
+  bottom: 0;
+}
+
+.program-card:hover .program-img {
+  transform: scale(1.1);
+}
+
+/* Team Section */
+.team {
+  padding: 100px 0;
+  background-color: white;
+}
+
+.team-member {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.team-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 62, 80, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.team-member:hover .team-overlay {
+  opacity: 1;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Founder Section */
+.founder-note {
+  background: #f9f9f9;
+}
+
+.founder-note .swiper-slide {
+  padding: 40px 20px;
+}
+
+.founder-note img {
+  width: 240px;
+  border: 5px solid #fff;
+  transition: transform 0.4s ease-in-out;
+}
+.founder-note img:hover {
+  transform: scale(1.1);
+}
+/* Pagination Dots */
+.swiper-pagination-bullet {
+  background: var(--light-color);
+  opacity: 1;
+  width: 14px !important;
+  height: 14px !important;
+  margin: 0 6px !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--secondary-color) !important;
+  transform: scale(1.2);
+}
+/* Donate Section */
+.donate {
+  padding: 100px 0;
+  background-color: var(--light-color);
+}
+
+.donate-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.get-in-touch-form-control {
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.get-in-touch-form-control:focus {
+  box-shadow: none;
+  border-color: var(--accent-color);
+}
+
+textarea.form-control {
+  height: 150px;
+}
+
+/* Animation Classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .about,
+  .mission,
+  .programs,
+  .team,
+  .donate,
+  .contact {
+    padding: 60px 0;
+  }
+  .saanjh-sathi .content-box {
+    padding: 10px;
+  }
+}
